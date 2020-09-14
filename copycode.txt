@@ -1,0 +1,38 @@
+<?php 
+
+$sql = "SELECT id FROM bills";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo "<div><p>".$row["id"]."</p></div>";
+    }
+?>
+
+<?php 
+
+$sql = "SELECT bill_value FROM bills";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo "<div><p>".$row["bill_value"]."</p><div>";
+    }
+?>
+
+?>
+
+<?php
+
+$sql = "SELECT bill_amount FROM bills";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo "<div><p>".$row["bill_amount"]."</p></div>";
+    }
+
+?>
